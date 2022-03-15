@@ -1,0 +1,21 @@
+<div class="boder-top fixed-bottom text-center bg-light">
+  <div="container">
+     <div class="row align-items-start">
+       <div class="col">
+          <%= link_to root_path, class: "nav-link #{'active fw-bold' if current_page?(root_path)}" do %>
+              Home
+          <% end %> 
+       </div>
+       <div class="col">
+          <%= link_to privacy_path, class: " #{'active fw-bold' if current_page?(privacy_path)}" do %>
+              Privacy
+          <% end %>
+       </div>
+       <div class="col">
+          <%= link_to terms_path, class: " #{'active fw-bold' if current_page?(terms_path)}" do %>
+              Terms
+          <% end %>
+        </div>
+     </div>
+   </div>     
+</div>

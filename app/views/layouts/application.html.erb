@@ -11,14 +11,19 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
        
   </head>
-
+   
   <body>      
-    <div class="container">
       <%= render 'layouts/header' %> 
       <%= render 'layouts/messages' %>  
-      
-      <%= yield %>
-    </div>
-  </body>   
-
+      <div class="container">
+         <%= yield %>  
+      </div>
+  </body> 
+   
+  <footer  >
+       <%= render 'layouts/footer' %>
+  </footer>
+    
 </html>
+
+ 
