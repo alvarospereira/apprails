@@ -17,11 +17,20 @@ class User < ApplicationRecord
            )
       end
       user.provider = access_token.provider 
-      user.provider = access_token.uid 
-      user.provider = access_token.info.name 
-      user.provider = access_token.info.image
+      user.uid = access_token.uid 
+      user.name = access_token.info.name 
+      user.image = access_token.info.image
       user.save
       
       user
-  end       
+  end 
+  
+  def username
+      if name?
+         name
+      else
+        email
+      end     
+  end
+
 end

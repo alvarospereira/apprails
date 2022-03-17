@@ -23,7 +23,7 @@
               <% else %>
                   <div class="fa fa-user"></div>
               <% end %>                
-              <b><%= current_user.email %></b>
+              <b><%= current_user.username %></b>
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
            <%= link_to edit_user_registration_path, class: "dropdown-item #{'active fw-bold' if current_page?(edit_user_registration_path)}" do %>
