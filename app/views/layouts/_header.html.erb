@@ -18,7 +18,11 @@
        <% if current_user %>          
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <div class="fa fa-user"></div>
+              <% if current_user.image? %>
+                 <%= image_tag current_user.image, size: "30x30", class: "rounded-circle" %>
+              <% else %>
+                  <div class="fa fa-user"></div>
+              <% end %>                
               <b><%= current_user.email %></b>
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
